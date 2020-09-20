@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<ui:composition>
+
+	<div class="header-bg">
+			<div class="wrap">
+				<div class="h-bg">
+					<div class="total">
+						<div class="header">
+							<div class="box_header_user_menu">
+								
+								<blockquote class="blockquote text-center">
+  <h3 class="mb-0">Değerinde Araç Alınır Satılır</h3> 
+  <footer class="blockquote-footer">Topcu Kardeşler<cite title="Source Title"> Otomotiv</cite></footer>
+</blockquote>			
+								
+								
+								<ul class="user_menu">
+								<ui:repeat var="ls" value="#{indexBean.model.listusers}">
+											<li class=""><a href="#"><div class="button-t">
+												<span>#{ls.ad}</span>
+											</div></a></li>
+											
+											</ui:repeat>
+								</ul>
+							</div>
+							<div class="header-right">
+								<ul class="follow_icon">
+									<li><a href="#"><img src="images/turkey.png" alt="" /></a></li>
+									<li><a href="#"><img src="images/icon1.png" alt="" /></a></li>
+									<li><a href="#"><img src="images/icon2.png" alt="" /></a></li>
+									<li><a href="#"><img src="images/icon3.png" alt="" /></a></li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+							<div class="header-bot">
+								<div class="logo">
+									<a href="index.html"><img src="images/indir.png" alt="" /></a>
+								</div>
+								<div class="search">
+									<input type="text" class="textbox" value=""
+										onfocus="this.value = '';"
+										onblur="if (this.value == '') {this.value = '';}" />
+									<button class="gray-button">
+										<span>Search</span>
+									</button>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="menu">
+							<div class="top-nav">
+								<ul>
+									<ui:repeat var="sl" value="#{indexBean.model.listKategori}">
+										<li><a href="index.html">#{sl.ad}</a></li>
+									</ui:repeat>
+
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
+</ui:composition>
+
+</html>
